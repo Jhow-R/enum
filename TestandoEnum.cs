@@ -17,7 +17,32 @@ namespace Enums
         }
 
         Generos valor = Generos.Aventura;
-        
-        enum Acoes { Falar = 0, Cantar = 1, Gritar = 2, Sussurrar = 3, Calar = 4 }
+
+        public enum StatusDaConta
+        {
+            NaoRegistrado = 1,
+            ClienteComum = 2,
+            ClienteEspecial = 3,
+            ClienteVIP = 4
+        }
+
+        public static void AplicarDesconto(StatusDaConta statusDaConta)
+        {
+            switch (statusDaConta)
+            {
+                case StatusDaConta.NaoRegistrado:
+                    Console.WriteLine(StatusDaConta.NaoRegistrado.GetHashCode());
+                    break;
+                case StatusDaConta.ClienteComum:
+                    Console.WriteLine("");
+                    break;
+                case StatusDaConta.ClienteEspecial:
+                    Console.WriteLine("");
+                    break;
+                case StatusDaConta.ClienteVIP:
+                    Console.WriteLine("");
+                    break;
+            }
+        }
     }
 }

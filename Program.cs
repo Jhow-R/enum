@@ -13,8 +13,11 @@ namespace Enums
             TestandoEnum.Generos valor;
 
             valor = TestandoEnum.Generos.Aventura;
-
             Console.WriteLine(valor);
+
+            TestandoEnum.StatusDaConta teste = TestandoEnum.StatusDaConta.NaoRegistrado;
+            TestandoEnum.AplicarDesconto(teste);
+
             Console.ReadLine();
         }
     }
