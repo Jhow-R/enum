@@ -17,5 +17,7 @@ namespace Enums
         }
 
         Generos valor = Generos.Aventura;
+        
+        enum Acoes { Falar = 0, Cantar = 1, Gritar = 2, Sussurrar = 3, Calar = 4 }
     }
 }
