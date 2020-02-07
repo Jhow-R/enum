@@ -18,6 +18,21 @@ namespace Enums
             TestandoEnum.StatusDaConta teste = TestandoEnum.StatusDaConta.NaoRegistrado;
             TestandoEnum.AplicarDesconto(teste);
 
+            Order order = new Order
+            {
+                ID = 1080,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+            };
+
+            Console.WriteLine(order);
+
+            string txt = OrderStatus.PendingPayment.ToString();
+            Console.WriteLine(txt);
+
+            Enum.TryParse("Delivered", out OrderStatus os);
+            Console.WriteLine(os);
+
             Console.ReadLine();
         }
     }
