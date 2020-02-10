@@ -30,7 +30,8 @@ namespace Enums
             string txt = OrderStatus.PendingPayment.ToString();
             Console.WriteLine(txt);
 
-            Enum.TryParse("Delivered", out OrderStatus os);
+            // Enum.TryParse("Delivered", out OrderStatus os);
+            OrderStatus os = (OrderStatus)Enum.Parse(typeof(OrderStatus), Console.ReadLine());
             Console.WriteLine(os);
 
             Console.ReadLine();
